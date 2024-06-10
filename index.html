@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App - Home</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="nav-home">Home</a>
+        <a href="archive.html" class="nav-archive">Archive</a>
+    </nav>
+    <h1>Todo Application</h1>
+    <section>
+        <h2>Add Todo</h2>
+        <input type="text" id="todoInput" placeholder="Enter todo name">
+        <select id="prioritySelect">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+        <button onclick="addTodo()">Add Todo</button>
+    </section>
+    <section>
+        <h2>Todos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="todoTableBody">
+                <!-- Initial Todo items -->
+                <tr>
+                    <td>Learn HTML</td>
+                    <td class="low-priority">Low</td>
+                    <td><button onclick="toggleStatus(this)">Pending🔃</button></td>
+                    <td><button class="archive-button" onclick="archiveItem(this)">Archive</button></td>
+                </tr>
+                <tr>
+                    <td>Learn CSS</td>
+                    <td class="medium-priority">Medium</td>
+                    <td><button onclick="toggleStatus(this)">Pending🔃</button></td>
+                    <td><button class="archive-button" onclick="archiveItem(this)">Archive</button></td>
+                </tr>
+                <tr>
+                    <td>Learn JavaScript</td>
+                    <td class="high-priority">High</td>
+                    <td><button onclick="toggleStatus(this)">Pending🔃</button></td>
+                    <td><button class="archive-button" onclick="archiveItem(this)">Archive</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
